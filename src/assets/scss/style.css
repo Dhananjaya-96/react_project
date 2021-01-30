@@ -12604,7 +12604,7 @@ Preloader
     align-items: center;
 }
 
-.feed-widget .feed-body .feed-item:hover {
+.feed-widget .feed-body .1feed-item:hover {
     background: #f6f9fc;
 }
 
@@ -12751,6 +12751,29 @@ Preloader
     height: 100%;
     opacity: 0.1;
     z-index: -1;
+}
+
+.sidebar-itm {
+    padding-left: 30px;
+    padding-top: 50px;
+}
+
+.sidebar-img {
+    max-width: 50px;
+}
+
+.sidebar-main {
+    background-color: black;
+    height: 100%;
+}
+
+.sidebar-head {
+    padding-top: 20px;
+    max-width: 70px;
+}
+
+.sidebar-footer {
+    max-width: 50px;
 }
 
 #main-wrapper[data-layout='vertical'] .left-sidebar[data-sidebarbg='skin3'],
@@ -13147,6 +13170,12 @@ Preloader
     padding: 0px;
 }
 
+.navbar-header-main {
+    flex: 1 1 auto;
+    padding: 1.25rem;
+    width: 1400px;
+}
+
 .topbar .top-navbar .dropdown-toggle::after {
     display: none;
 }
@@ -13503,3 +13532,5 @@ User Profile
     height: 40px;
     background: #32325d;
 }
+
+

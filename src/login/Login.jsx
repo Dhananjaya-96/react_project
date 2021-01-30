@@ -133,6 +133,7 @@
 import React, { Component } from "react";
 import "./Login.css";
 import { Redirect } from "react-router-dom";
+import background from "assets/images/bgimg.jpg";
 class Login extends Component {
   constructor(props) {
     super(props);
@@ -191,7 +192,7 @@ class Login extends Component {
       return <Redirect to="/" />;
     }
     return (
-        <div className="container">
+        <div  className="container-login">
           <form onSubmit={this.login} className="form-signin">
             <h1 className="h3 mb-3 font-weight-normal">Please sign in</h1>
             <div className="row">
@@ -211,7 +212,6 @@ class Login extends Component {
                 <input type="submit" value="Login" />
               </div>
             </div>
-            <p>user_id === "admin" && user_password === "123"</p>
           </form>
         </div>
     );

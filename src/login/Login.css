@@ -1,3 +1,5 @@
+
+
 body {
     font-family: Arial, Helvetica, sans-serif;
 }
@@ -105,6 +107,14 @@ p {
 /* hide some text on medium and large screens */
 .hide-md-lg {
     display: none;
+}
+
+.container-login {
+    padding-top: 300px;
+    padding-left: 40%;
+    padding-right: 40%;
+    padding-bottom: 100px;
+    background-color: #0e2259;
 }
 
 /* bottom container */
