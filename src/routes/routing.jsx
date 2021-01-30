@@ -10,11 +10,11 @@ import PopoverComponent from '../views/ui-components/popover.jsx';
 import TooltipComponent from '../views/ui-components/tooltip.jsx';
 
 var ThemeRoutes = [
-  { 
-    path: '/dashboard', 
-    name: 'Dashboard', 
-    icon: 'ti-loop', 
-    component: Starter 
+  {
+    path: '/dashboard',
+    name: 'Dashboard',
+    icon: 'ti-loop',
+    component: Starter
   },
   {
     path: '/alert',
@@ -64,6 +64,6 @@ var ThemeRoutes = [
     icon: 'mdi mdi-image-filter-vintage',
     component: TooltipComponent
   },
-  { path: '/', pathTo: '/dashboard', name: 'Dashboard', redirect: true }
+  // { path: '/', pathTo: '/dashboard', name: 'Dashboard', redirect: true }
 ];
 export default ThemeRoutes;
