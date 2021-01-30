@@ -156,13 +156,35 @@ class Login extends Component {
   login = event => {
     let user_id = this.state.loginParams.user_id;
     let user_password = this.state.loginParams.user_password;
-    if (user_id === "admin" && user_password === "123") {
-      localStorage.setItem("token", "T");
-      this.setState({
-        islogged: true
-      });
-    }
-    event.preventDefault();
+    const requestOptions = {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        "username" : user_id,
+        "password" : user_password
+      })
+    };
+    fetch('http://apps.avantrio.xyz:8010/api/user/login', requestOptions)
+        .then(response => {
+          console.log('RESPONSE', response);
+          if (response.status === 200) {
+            localStorage.setItem("token", "T");
+            this.setState({
+              islogged: true
+            });
+          }
+          event.preventDefault();
+        })
+        .then(data => {
+          console.log('DATA', data);
+        });
+    // if (res) {
+    //   localStorage.setItem("token", "T");
+    //   this.setState({
+    //     islogged: true
+    //   });
+    // }
+    // event.preventDefault();
   };
   render() {
     if (localStorage.getItem("token")) {
